@@ -430,7 +430,36 @@ export const constantRoute = [
       keywords: '文本编辑，富文本预览，在线编辑文本，文本编辑获取html',
       description: '在线富文本编辑, html实时预览，在线编辑文本，文本编辑获取html',
     }
+  },{
+    path: '/spider/HtmlEdit',
+    component: () => import('@/components/Tools/spider/HtmlEdit.vue'),
+    name: 'HtmlEdit',
+    meta: {
+      title: "在线文本编辑/HTML获取",
+      keywords: '文本编辑，富文本预览，在线编辑文本，文本编辑获取html',
+      description: '在线富文本编辑, html实时预览，在线编辑文本，文本编辑获取html',
+    }
+    },
+  {
+    path: '/spider/FormatHeaders',
+    component: () => import('@/components/Tools/spider/headers.vue'),
+    name: 'FormatHeaders',
+    meta: {
+      title: "在线文本编辑/HTML获取",
+      keywords: '文本编辑，富文本预览，在线编辑文本，文本编辑获取html',
+      description: '在线富文本编辑, html实时预览，在线编辑文本，文本编辑获取html',
+    }
+  },  {
+    path: '/spider/FormatCookie',
+    component: () => import('@/components/Tools/spider/cookie.vue'),
+    name: 'FormatCookie',
+    meta: {
+      title: "在线文本编辑/HTML获取",
+      keywords: '文本编辑，富文本预览，在线编辑文本，文本编辑获取html',
+      description: '在线富文本编辑, html实时预览，在线编辑文本，文本编辑获取html',
+    }
   },
+
   // 关于
   {
     path: '/about',

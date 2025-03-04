@@ -4,6 +4,40 @@ import type { ToolsReqData } from '@/components/Tools/tools.type.ts'
 export function getToolsCate() {
   return [
     {
+      id: 20,
+      title: '爬虫工具',
+      icon: '',
+      list: [
+        {
+          id: 1,
+          title: 'html渲染',
+          logo: '/images/logo/numberToChinese.png',
+          desc: 'html换成可看样式',
+          url: '/spider/HtmlEdit',
+          cateId: 20,
+          cate: '爬虫工具'
+        },
+        {
+          id: 2,
+          title: 'header格式化',
+          logo: '/images/logo/numberToChinese.png',
+          desc: 'header转dict',
+          url: '/spider/FormatHeaders',
+          cateId: 20,
+          cate: '爬虫工具'
+        },
+        {
+          id: 2,
+          title: 'cookie格式化',
+          logo: '/images/logo/numberToChinese.png',
+          desc: 'cookie转dict',
+          url: '/spider/FormatCookie',
+          cateId: 20,
+          cate: '爬虫工具'
+        }
+      ]
+    },
+    {
       id: 2,
       title: '开发运维',
       icon: '',
@@ -508,6 +542,7 @@ export function getToolsCate() {
         }
       ]
     }
+
   ]
 }
 
