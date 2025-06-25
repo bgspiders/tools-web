@@ -120,7 +120,7 @@ const encrypt = () => {
     }
     result.value = encrypted.toString()
   } catch (error) {
-    result.value = `错误: ${error.message}`
+    result.value = `错误: ${(error as Error).message}`
   }
 }
 
@@ -170,7 +170,7 @@ const decrypt = () => {
     }
     result.value = decrypted.toString(CryptoJS.enc.Utf8)
   } catch (error) {
-    result.value = `错误: ${error.message}`
+    result.value = `错误: ${(error as Error).message}`
   }
 }
 

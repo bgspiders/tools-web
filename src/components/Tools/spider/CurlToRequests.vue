@@ -40,7 +40,7 @@ const convert = () => {
   try {
     result.value = curlToRequests(curl.value)
   } catch (e) {
-    result.value = '转换失败：' + e.message
+    result.value = '转换失败：' + ((e as Error).message || e)
   }
 }
 

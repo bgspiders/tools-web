@@ -144,47 +144,47 @@ const processText = () => {
   try {
     switch (operation.value) {
       case 'encrypt':
-        result.value = encryptRSA(inputText.value, keyText.value, padding.value)
+        result.value = encryptRSA(inputText.value)
         break
       case 'decrypt':
-        result.value = decryptRSA(inputText.value, keyText.value, padding.value)
+        result.value = decryptRSA(inputText.value)
         break
       case 'sign':
-        result.value = signRSA(inputText.value, keyText.value, hashAlgorithm.value)
+        result.value = signRSA(inputText.value)
         break
       case 'verify':
         if (!signature.value) {
           alert('请输入签名')
           return
         }
-        result.value = verifyRSA(inputText.value, signature.value, keyText.value, hashAlgorithm.value)
+        result.value = verifyRSA(inputText.value, signature.value)
         break
     }
   } catch (error) {
-    result.value = `错误: ${error.message}`
+    result.value = `错误: ${(error as Error).message}`
   }
 }
 
 // 以下为简化实现，建议实际项目用专业RSA库
-const encryptRSA = (text: string, publicKey: string, padding: string) => {
+const encryptRSA = (text: string) => {
   const encrypted = CryptoJS.AES.encrypt(text, 'rsa-key', {
     mode: CryptoJS.mode.ECB,
     padding: CryptoJS.pad.Pkcs7
   })
   return encrypted.toString()
 }
-const decryptRSA = (text: string, privateKey: string, padding: string) => {
+const decryptRSA = (text: string) => {
   const decrypted = CryptoJS.AES.decrypt(text, 'rsa-key', {
     mode: CryptoJS.mode.ECB,
     padding: CryptoJS.pad.Pkcs7
   })
   return decrypted.toString(CryptoJS.enc.Utf8)
 }
-const signRSA = (text: string, privateKey: string, hashAlgorithm: string) => {
+const signRSA = (text: string) => {
   const hash = CryptoJS.SHA256(text).toString()
   return hash
 }
-const verifyRSA = (text: string, signature: string, publicKey: string, hashAlgorithm: string) => {
+const verifyRSA = (text: string, signature: string) => {
   const hash = CryptoJS.SHA256(text).toString()
   return hash === signature ? '签名验证成功' : '签名验证失败'
 }

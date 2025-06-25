@@ -62,7 +62,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { copy } from '@/utils/string'
 import CryptoJS from 'crypto-js'
 
 const inputText = ref('')
@@ -116,7 +115,7 @@ const encrypt = () => {
     }
     result.value = encrypted.toString()
   } catch (error) {
-    result.value = `错误: ${error.message}`
+    result.value = `错误: ${(error as Error).message}`
   }
 }
 
@@ -162,7 +161,7 @@ const decrypt = () => {
     }
     result.value = decrypted.toString(CryptoJS.enc.Utf8)
   } catch (error) {
-    result.value = `错误: ${error.message}`
+    result.value = `错误: ${(error as Error).message}`
   }
 }
 
