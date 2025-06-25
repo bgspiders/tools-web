@@ -27,11 +27,47 @@ export function getToolsCate() {
           cate: '爬虫工具'
         },
         {
-          id: 2,
+          id: 3,
           title: 'cookie格式化',
           logo: '/images/logo/numberToChinese.png',
           desc: 'cookie转dict',
           url: '/spider/FormatCookie',
+          cateId: 20,
+          cate: '爬虫工具'
+        },
+        {
+          id: 4,
+          title: 'AES加解密',
+          logo: '/images/logo/md5.png',
+          desc: 'AES对称加密解密工具，支持多种模式和填充方式',
+          url: '/spider/AES',
+          cateId: 20,
+          cate: '爬虫工具'
+        },
+        {
+          id: 5,
+          title: 'DES加解密',
+          logo: '/images/logo/md5.png',
+          desc: 'DES对称加密解密工具，支持多种模式和填充方式',
+          url: '/spider/DES',
+          cateId: 20,
+          cate: '爬虫工具'
+        },
+        {
+          id: 6,
+          title: 'RSA加解密',
+          logo: '/images/logo/md5.png',
+          desc: 'RSA非对称加密解密工具，支持加密、解密、签名、验签',
+          url: '/spider/RSA',
+          cateId: 20,
+          cate: '爬虫工具'
+        },
+        {
+          id: 7,
+          title: 'curl转requests',
+          logo: '/images/logo/http_code.png',
+          desc: '将curl命令一键转换为Python requests代码',
+          url: '/spider/CurlToRequests',
           cateId: 20,
           cate: '爬虫工具'
         }

@@ -459,7 +459,46 @@ export const constantRoute = [
       description: '在线富文本编辑, html实时预览，在线编辑文本，文本编辑获取html',
     }
   },
-
+  {
+    path: '/spider/AES',
+    component: () => import('@/components/Tools/spider/AES.vue'),
+    name: 'AES',
+    meta: {
+      title: "AES加解密",
+      keywords: 'AES加密,AES解密,对称加密',
+      description: 'AES对称加密解密工具，支持多种模式和填充方式',
+    }
+  },
+  {
+    path: '/spider/DES',
+    component: () => import('@/components/Tools/spider/DES.vue'),
+    name: 'DES',
+    meta: {
+      title: "DES加解密",
+      keywords: 'DES加密,DES解密,对称加密',
+      description: 'DES对称加密解密工具，支持多种模式和填充方式',
+    }
+  },
+  {
+    path: '/spider/RSA',
+    component: () => import('@/components/Tools/spider/RSA.vue'),
+    name: 'RSA',
+    meta: {
+      title: "RSA加解密",
+      keywords: 'RSA加密,RSA解密,RSA签名,RSA验签,非对称加密',
+      description: 'RSA非对称加密解密工具，支持加密、解密、签名、验签',
+    }
+  },
+  {
+    path: '/spider/CurlToRequests',
+    component: () => import('@/components/Tools/spider/CurlToRequests.vue'),
+    name: 'CurlToRequests',
+    meta: {
+      title: "curl转requests",
+      keywords: 'curl转requests,curl转python,接口调试',
+      description: '将curl命令一键转换为Python requests代码',
+    }
+  },
   // 关于
   {
     path: '/about',
